@@ -14,8 +14,7 @@ import { makeStyles } from '@mui/styles';
 import MuiAlert from '@mui/material/Alert';
 
 
-const socket = io('http://localhost:5000');
-
+const socket = io(process.env.SOCKET_SERVER_URL);
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
