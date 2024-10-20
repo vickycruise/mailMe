@@ -152,14 +152,14 @@ const Chat = () => {
 
   return (
     <Container className={classes.container}>
-      {/* Chat Header */}
+  
       <Box className={classes.chatHeader}>
         <Typography variant="h6">
           Chat Room: {room || 'No Room Joined'}
         </Typography>
       </Box>
 
-      {/* Chat Log */}
+   
       <Box className={classes.chatLogContainer}>
         {chatLog.map((log, index) => (
           <Box
@@ -174,10 +174,10 @@ const Chat = () => {
             </Typography>
           </Box>
         ))}
-        <div ref={chatEndRef} /> {/* Dummy div to ensure scrolling */}
+        <div ref={chatEndRef} />
       </Box>
 
-      {/* Input for Username and Room */}
+    
       <Box className={classes.inputContainer}>
         <TextField
           label="Enter Username"
@@ -205,7 +205,7 @@ const Chat = () => {
         </Button>
       </Box>
 
-      {/* Message Input */}
+
       <Box className={classes.messageInputContainer}>
         <TextField
           label="Enter message"
@@ -227,7 +227,7 @@ const Chat = () => {
         </Button>
       </Box>
 
-      {/* Snackbar for feedback */}
+  
       <Snackbar open={snackOpen} autoHideDuration={6000} onClose={handleSnackClose}>
         <Alert onClose={handleSnackClose} severity="success">
           Welcome to the chat!
