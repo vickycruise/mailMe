@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '10px',
   },
 }));
-const socket = io(process.env.REACT_APP_SOCKET_SERVER_URL);
+const socket = io(process.env.REACT_APP_SOCKET_SERVER_URL||"http://localhost:5000");
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
