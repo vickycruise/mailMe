@@ -14,7 +14,6 @@ import { makeStyles } from '@mui/styles';
 import MuiAlert from '@mui/material/Alert';
 
 
-const socket = io(process.env.SOCKET_SERVER_URL);
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
@@ -79,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '10px',
   },
 }));
+const socket = io(process.env.REACT_APP_SOCKET_SERVER_URL);
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
